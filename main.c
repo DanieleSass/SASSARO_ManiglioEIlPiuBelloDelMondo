@@ -1,8 +1,13 @@
 #include <stdio.h>
-void EsercizioUno(int, int, int* , int* );
-void EsercizioDue(int*, int*,int*, int);
-//void EsercizioTre(int *, int*);
-int Main(void) {
+
+#include "EsercizioUno.h"
+#include "EsercizioDue.h"
+#include "EsercizioTre.h"
+#include "EsercizioQuattro.h"
+#include "EsercizioCinque.h"
+#include "EsercizioSei.h"
+int main(void) {
+    /*
     int quoziente, resto;
     EsercizioUno(3,3, &quoziente, &resto);
     printf("Quoziente: %d Resto: %d\n", quoziente, resto);
@@ -12,21 +17,18 @@ int Main(void) {
     EsercizioDue(&ore,&minuti,&secondi, 3700);
     printf("Ore: %d Minuti: %d Secondi: %d\n", ore, minuti, secondi);
 
-    int numeroUno;
-    int numeroDue;
-    //EsercizioTre(&numeroUno, &numeroDue);
+    int numeroUno= 3;
+    int numeroDue= 4;
+    EsercizioTre(&numeroUno, &numeroDue);
+    printf("Numero Uno: %d, Numero Due: %d\n", numeroUno, numeroDue);
+
+    EsercizioQuattro();
+
+    EsercizioCinque();
+    */
+    EsercizioSei();
     return 0;
 }
 
-void EsercizioUno(int a, int b, int* quoziente, int* resto) {
-    *quoziente = a/b;
-    *resto = a%b;
-}
 
-void EsercizioDue(int* ore, int* minuti,int* secondi, int secondireal) {
-    *ore=secondireal/3600;
-    secondireal%=3600;
-    *minuti=secondireal/60;
-    secondireal%=60;
-    *secondi=secondireal%600;
-}
+

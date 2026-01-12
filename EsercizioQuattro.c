@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int Main(void) {
+int EsercizioQuattro(void) {
     int N;
     int *array;
 

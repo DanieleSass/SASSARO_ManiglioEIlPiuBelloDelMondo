@@ -1,0 +1,10 @@
+//
+// Created by raffa on 12/01/2026.
+//
+
+#ifndef SASSARO_MANIGLIOEILPIUBELLODELMONDO_ESERCIZIODUE_H
+#define SASSARO_MANIGLIOEILPIUBELLODELMONDO_ESERCIZIODUE_H
+
+void EsercizioDue(int* ore, int* minuti, int* secondo, int secondireal);
+
+#endif //SASSARO_MANIGLIOEILPIUBELLODELMONDO_ESERCIZIODUE_H
