@@ -21,4 +21,12 @@ add_executable(SASSARO_ManiglioEIlPiuBelloDelMondo
         EsercizioNove.h
         EsercizioDieci.c
         EsercizioDieci.h
+        EsercizioUndici.c
+        EsercizioUndici.h
+        EsercizioDodici.c
+        EsercizioDodici.h
+        EsercizioTredici.c
+        EsercizioTredici.h
+        EsercizioQuattordici.c
+        EsercizioQuattordici.h
 )
