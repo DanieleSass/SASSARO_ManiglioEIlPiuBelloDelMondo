@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct  {
     char titolo[100];
@@ -21,7 +22,7 @@ void MostraLibreria(Libro**, int);
 void AggiungiLibro(Libro***, int* , int*);
 
 
-int EsercizioDieci(void) {
+void EsercizioDieci(void) {
     Libreria libreria;
     //libreria.lista = (Libro**) malloc(sizeof(Libro*)*1);
     libreria.lista = NULL;
@@ -30,7 +31,7 @@ int EsercizioDieci(void) {
     int contatoreCapacita=0;
 
     do {
-        printf("1 per mostrare lista, 2 per aggiungere, 0 esci \n");
+        printf("1 per mostrare lista, 2 per aggiungere, 0 (o qualsiasi altra roba) esci \n");
         scanf("%d", &scelta);
         getchar();
 
@@ -51,7 +52,7 @@ int EsercizioDieci(void) {
     free(libreria.lista);
     libreria.lista = NULL;
 
-    return 0;
+    return;
 }
 
 void AggiungiLibro(Libro*** lista, int* cont, int* capacita) {
@@ -66,8 +67,11 @@ void AggiungiLibro(Libro*** lista, int* cont, int* capacita) {
         *lista = tmp;
     }
         (*lista)[*cont]=malloc(sizeof(Libro));
+
+
         printf("Metti titolo\n");
         fgets((*lista)[*cont]->titolo, 100, stdin);
+    (*lista)[*cont]->titolo[strcspn((*lista)[*cont]->titolo, "\n")] = '\0';
 
         printf("Metti pagine \n");
         scanf("%d", &(*lista)[*cont]->pagine);

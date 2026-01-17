@@ -47,6 +47,7 @@ void EsercizioUndici() {
         somma+=squadra.squadra[i].punreggio;
     }
     printf("Punti totali = %d\n", somma);
+
     free(squadra.squadra);
     squadra.squadra=NULL;
 }

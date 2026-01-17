@@ -17,6 +17,7 @@ void EsercizioSei() {
 
     printf("Nome persona\n");
     fgets(persona1.nome, sizeof(persona1.nome), stdin);
+    //trova prima occorrenza del \n e lo cambia con char terminatore
     persona1.nome[strcspn(persona1.nome, "\n")] = '\0';
 
     printf("Cognome persona\n");

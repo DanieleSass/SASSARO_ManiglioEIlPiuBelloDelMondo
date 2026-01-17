@@ -14,7 +14,7 @@ typedef struct Dipendente {
 
 #include "EsercizioNove.h"
 
-int EsercizioNove(void) {
+void EsercizioNove(void) {
 
   int grandezzaLista=3;
 
@@ -22,14 +22,31 @@ int EsercizioNove(void) {
   //lista di 3 elemneti
   lista= (struct Dipendente**)malloc(sizeof(struct Dipendente*) * grandezzaLista);
 
+  if (lista==NULL) {
+    printf("Errore allocazione mallocc");
+    return;
+  }
+
   struct Dipendente* dip1;
   struct Dipendente* dip2;
   struct Dipendente* dip3;
 
 
   dip1 = (struct Dipendente*)malloc(sizeof(struct Dipendente));
+  if (dip1==NULL) {
+    printf("Errore allocazione mallocc");
+    return;
+  }
   dip2 = (struct Dipendente*)malloc(sizeof(struct Dipendente));
+  if (dip2==NULL) {
+    printf("Errore allocazione mallocc");
+    return;
+  }
   dip3 = (struct Dipendente*)malloc(sizeof(struct Dipendente));
+  if (dip3==NULL) {
+    printf("Errore allocazione mallocc");
+    return;
+  }
 
 
   strcpy(dip1->nome, "nome1");
@@ -41,7 +58,7 @@ int EsercizioNove(void) {
   dip2->stipendio=2400;
 
   strcpy(dip3->nome, "nome3");
-  dip3->anniServizio=8;
+  dip3->anniServizio=18;
   dip3->stipendio=1400;
 
   lista[0]=dip1;
@@ -50,7 +67,7 @@ int EsercizioNove(void) {
 
   for (int i =0; i < grandezzaLista; i++) {
     if (lista[i]->anniServizio >10) {
-      printf("Nome: %s ;anni di servizio %d ",lista[i]->nome , lista[i]->anniServizio);
+      printf("Nome: %s ;anni di servizio %d \n",lista[i]->nome , lista[i]->anniServizio);
     }
   }
 
@@ -59,5 +76,8 @@ int EsercizioNove(void) {
     lista[i]=NULL;
   }
 
-  return 0;
+  free(lista);
+  lista=NULL;
+
+  return;
 }

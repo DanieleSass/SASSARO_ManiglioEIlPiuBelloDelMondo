@@ -32,10 +32,16 @@ void EsercizioTredici() {
         scanf("%d", &numeroSquadre);
         getchar();
         if (numeroSquadre <= 0)
-            printf("Deve essere un numero positivo!\n");
+            printf("Deve essere un numero positivo\n");
     } while (numeroSquadre <= 0);
 
     campionato.squadre = (Squadra*)malloc(sizeof(Squadra)*numeroSquadre);
+
+    if (campionato.squadre == NULL) {
+        printf("Errore allocazione da memoria\n");
+        return;
+    }
+
     numeroGiocatori = (int*) malloc(sizeof(int) * numeroSquadre);
 
     for (int i = 0; i < numeroSquadre; i++) {
@@ -48,10 +54,15 @@ void EsercizioTredici() {
             scanf("%d", &numeroGiocatori[i]);
             getchar();
             if (numeroGiocatori[i] <= 0)
-                printf("Deve essere un numero positivo!\n");
+                printf("Deve essere un numero positivo\n");
         } while (numeroGiocatori[i] <= 0);
 
         campionato.squadre[i].giocatori = (Giocatore*) malloc(sizeof(Giocatore) * numeroGiocatori[i]);
+        if (campionato.squadre[i].giocatori==NULL) {
+            printf("Errore allocazione da memoria\n");
+            return;
+        }
+
         for (int x=0; x < numeroGiocatori[i]; x++) {
             printf("Nome Giocatore: ");
             fgets(campionato.squadre[i].giocatori[x].nome, 100, stdin);

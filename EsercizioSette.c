@@ -12,16 +12,23 @@ typedef struct Data {
 
 };
 
+struct Data Confronta(struct Data, struct Data);
+
 void EsercizioSette() {
     struct Data data1;
     struct Data data2;
-    data1.giorno = 1;
-    data1.mese = 12;
-    data1.anno = 2025;
+    data1.giorno = 4;
+    data1.mese = 03;
+    data1.anno = 1995;
 
-    data2.giorno = 1;
-    data2.mese = 12;
-    data2.anno = 2025;
+    data2.giorno = 17;
+    data2.mese = 03;
+    data2.anno = 1995;
+
+    struct Data dataFinale = Confronta(data1, data2);
+
+    printf("La data piu' recente e' %d/%d/%d \n", dataFinale.giorno, dataFinale.mese, dataFinale.anno);
+
 }
 
 struct Data Confronta(struct Data d1, struct Data d2) {
@@ -51,4 +58,6 @@ struct Data Confronta(struct Data d1, struct Data d2) {
             }
         }
     }
+//per sicurezza
+    return d1;
 }

@@ -9,5 +9,5 @@ void EsercizioDue(int* ore, int* minuti,int* secondi, int secondireal) {
     secondireal%=3600;
     *minuti=secondireal/60;
     secondireal%=60;
-    *secondi=secondireal%600;
+    *secondi=secondireal;
 }

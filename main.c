@@ -6,27 +6,47 @@
 #include "EsercizioQuattro.h"
 #include "EsercizioCinque.h"
 #include "EsercizioSei.h"
-int main(void) {
-    /*
-    int quoziente, resto;
-    EsercizioUno(3,3, &quoziente, &resto);
-    printf("Quoziente: %d Resto: %d\n", quoziente, resto);
+#include "EsercizioSette.h"
+#include "EsercizioOtto.h"
+#include "EsercizioNove.h"
+#include "EsercizioDieci.h"
+#include "EsercizioUndici.h"
+#include "EsercizioDodici.h"
+#include "EsercizioTredici.h"
+#include "EsercizioQuattordici.h"
 
+int main(void) {
+
+    /*
+
+    int quoziente, resto;
+    EsercizioUno(8, 2, &quoziente, &resto);
+    printf("Quotiente: %d Resto: %d\n", quoziente, resto);
 
     int ore, minuti, secondi;
-    EsercizioDue(&ore,&minuti,&secondi, 3700);
+    EsercizioDue(&ore, &minuti, &secondi, 3706);
     printf("Ore: %d Minuti: %d Secondi: %d\n", ore, minuti, secondi);
 
-    int numeroUno= 3;
-    int numeroDue= 4;
-    EsercizioTre(&numeroUno, &numeroDue);
-    printf("Numero Uno: %d, Numero Due: %d\n", numeroUno, numeroDue);
+    int numeroA = 3;
+    int numeroB =4;
+    EsercizioTre(&numeroA, &numeroB);
+    printf("%d %d", numeroA, numeroB);
+*/
 
-    EsercizioQuattro();
 
-    EsercizioCinque();
-    */
-    EsercizioSei();
+
+    //EsercizioQuattro();
+    //EsercizioCinque();
+    //EsercizioSei();
+    //EsercizioSette();
+    //EsercizioOtto();
+    //EsercizioNove();
+    //EsercizioDieci();
+    //EsercizioUndici();
+    //EsercizioDodici();
+    //EsercizioTredici();
+    EsercizioQuattordici();
+
     return 0;
 }
 
